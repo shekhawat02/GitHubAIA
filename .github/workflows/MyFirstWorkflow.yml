@@ -4,7 +4,6 @@ on:
   push:
     branches: 
       -main   
-      
   workflow_dispatch:
         
 jobs:
@@ -12,13 +11,10 @@ jobs:
      runs-on: ubuntu-latest
      steps: 
      - run: echo "hellow world"
-
      - name: Checkout
        uses: actions/checkout@v5.0.0
-
-     - name: List Files in repository
-     - run: |
-          echo "this repository ${{ Github.repository }} contains the following 
+     - run: |                          
+        echo "this repository ${{ Github.repository }} contains the following 
           files:"
           tree
        
